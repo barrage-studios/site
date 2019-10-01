@@ -1,26 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(114, 114, 114);
-}
-
-.site {
+body {
     display: grid;
-    background-color: rgb(184, 184, 184);
-    grid-template-columns: 1fr 9fr;
-    grid-template-rows: 1fr 
-                        13fr 
-                        1fr;
-    grid-template-areas:
-        ". ."
-        ". ."
-        ". footer";
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "docnav document docsel";
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+    position: fixed;
 }
 
-.footer {
-    grid-area: footer;
-    background-color: #d4d4d5;
-    text-align: center;
+.docnav {
+    grid-area: nav;
+}
+
+.document {
+    grid-area: document;
+}
+
+.document iframe {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.docsel {
+    grid-area: docsel;
 }
