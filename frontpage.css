@@ -1,0 +1,28 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+        "head"
+        "main";
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    grid-area: head;
+    font-size: 50px;
+    text-align: center;
+}
+
+.header .name {
+    color: rgb(45, 206, 99);
+}
+
+.content {
+    grid-area: main;
+    font-size: 20px;
+    text-align: left;
+    text-indent: 30px;
+}
