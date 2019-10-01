@@ -1,17 +1,48 @@
 body {
+    background-color: #dddddd;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
-        "docnav document docsel";
+        "docsel document sidebar";
     width: 100vw;
     height: 100vh;
     margin: 0%;
     position: fixed;
 }
 
-.docnav {
-    grid-area: nav;
+.docsel {
+    grid-area: docsel;
+    background: grey;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.docsel .docbox{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-style: groove;
+    border-color: black;
+}
+
+.docsel .docbox a:link, a:visited {
+    background-color: grey;
+    color: black;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.docsel .docbox a:hover {
+    color: white;
 }
 
 .document {
@@ -20,10 +51,12 @@ body {
 
 .document iframe {
     overflow: hidden;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    border-color: #dddddd;
+    border-style: groove;
 }
 
-.docsel {
-    grid-area: docsel;
+.sidebar {
+    grid-area: sidebar;
 }
